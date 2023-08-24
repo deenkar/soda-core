@@ -2,12 +2,15 @@
 
 from setuptools import find_namespace_packages, setup
 
-package_name = "soda-core-duckdb"
+package_name = "soda-core-teradata"
 package_version = "3.0.48"
-description = "Soda Core Duckdb Package"
+description = "Soda Core Teradata Package"
 
-requires = [f"soda-core=={package_version}", "duckdb"]
-
+requires = [
+    f"soda-core=={package_version}",
+    "teradatasql>=17.10.0.0",
+]
+# TODO Fix the params
 setup(
     name=package_name,
     version=package_version,
